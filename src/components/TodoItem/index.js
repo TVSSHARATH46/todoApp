@@ -9,6 +9,7 @@ const TodoItem = props =>{
     const onModifyTask = () => {
         modifyTask(id)
     }
+    const taskName = isCompleted?'text-dashed':'text-normal'
     return(
         <li className='list-item'>
             <button onClick={onModifyTask} className='modify-task'>
@@ -16,8 +17,8 @@ const TodoItem = props =>{
                     isCompleted === true ? "is completed": 'not completed'
                 }
             </button>
-            <h1>{name}</h1>
-            <button onClick={deleteTask}>delete task</button>
+            <h1 className={taskName}>{name}</h1>
+            <button onClick={deleteTask} className='delete-task-button'>delete task</button>
         </li>
     )
 }
