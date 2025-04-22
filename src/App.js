@@ -1,6 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import TodoItem from './components/TodoItem'
+import { IoMdAddCircleOutline } from "react-icons/io";
 const App = () => {
   const [name, setName] = useState('')
   const [taskList, addTask] = useState([])
@@ -42,7 +43,7 @@ const App = () => {
         <form onSubmit={onAddTask} className='form-container'>
           <input type='text' placeholder='Add Task' onChange={onChangeName} value={name} className='input-element' />
           <button type='submit' className='add-task-button'>
-            Add Task
+            <IoMdAddCircleOutline /> Add Task
           </button>
         </form>
         <ul className='task-list'>
